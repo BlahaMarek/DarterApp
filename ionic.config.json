@@ -1,0 +1,7 @@
+{
+  "name": "darter",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

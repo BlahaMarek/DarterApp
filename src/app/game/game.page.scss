@@ -1,0 +1,28 @@
+.score {
+  text-align: center;
+}
+
+.next {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  margin: 0 auto;
+}
+.row {
+  ion-button {
+    width: 45%;
+    margin: 2.5%
+  }
+  .pro {
+    width: 95%;
+    margin: 2.5%
+  }
+}
+
+.close {
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  font-size: 1.7em;
+}

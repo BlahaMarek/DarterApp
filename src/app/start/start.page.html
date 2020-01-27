@@ -1,0 +1,23 @@
+<ion-content padding>
+    <ion-img class="logo" [src]="'../../assets/logoMain.png'"></ion-img>
+    <form [formGroup]="game">
+        <div class="row">
+            <p>Score</p>
+            <ion-input type="number" [value]="301" formControlName="score"></ion-input>
+        </div>
+
+        <ion-icon color="danger" name="person-add" (click)="addPlayer()"></ion-icon>
+        <div formArrayName="players">
+            <div *ngFor="let person of players.controls; let i=index">
+                <div [formGroupName]="i" class="row">
+                    <ion-input formControlName="player" placeholder="Player name"></ion-input>
+                    <ion-icon name="trash" (click)="deletePlayer(i)"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </form>
+</ion-content>
+
+<ion-footer>
+    <ion-button [disabled]="!game.valid || players.length < 1" expand="full" color="danger" (click)="startGame()">Start</ion-button>
+</ion-footer>
